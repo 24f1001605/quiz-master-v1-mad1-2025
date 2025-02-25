@@ -1,0 +1,49 @@
+# Python-related files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+ENV/
+env/
+
+# Flask & Web Framework files
+instance/
+*.sqlite3
+*.db
+*.pyo
+*.pyd
+
+# Jinja2 Cache
+__pycache__/
+*.j2c
+*.jinja2c
+
+# Logs and debug files
+*.log
+logs/
+debug.log
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.swp
+*.swo
+
+# Node.js & frontend dependencies (if any)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# MacOS & System files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Git & temporary files
+*.bak
+*.tmp
