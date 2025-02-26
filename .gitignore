@@ -9,6 +9,7 @@ build/
 venv/
 ENV/
 env/
+myenv/
 
 # Flask & Web Framework files
 instance/
