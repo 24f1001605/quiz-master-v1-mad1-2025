@@ -1,4 +1,6 @@
 from app import db
+from werkzeug.security import generate_password_hash
+from datetime import date
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -7,6 +9,7 @@ class User(db.Model):
     fullname = db.Column(db.String(64), nullable=False)
     qualification = db.Column(db.String(64), nullable=False)
     dob = db.Column(db.Date, nullable=False)
+    is_admin = db.Column(db.Boolean, default=False)
 
 class Subject(db.Model):
     id = db.Column(db.Integer, primary_key=True)

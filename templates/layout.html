@@ -17,10 +17,19 @@
     {%- block style %}{% endblock %}
 </head>
 <body>
-    {%- include 'navbar.html' %}
+    {% include 'navbar.html' %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="container">
+                {% for message in messages %}
+                    <div class="alert alert-danger" role="alert">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
 
     <div class="container">
-        {%- block content %}{% endblock %}
+        {% block content %}{% endblock %}
     </div>
 
     {%- block script %}{% endblock %}

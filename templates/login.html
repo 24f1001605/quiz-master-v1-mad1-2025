@@ -5,19 +5,21 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="display-1">Login</h1> 
-<form action="" class="form">
+<div class="container">
+    <h1 class="display-1 mb-4">Login</h1>
+    
+    <form method="POST" action="{{ url_for('login') }}" class="form">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" required class="form-control" placeholder="Enter your username">
+        </div>
 
-    <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" name="username" required class="form-control" placeholder="Enter your username">
-    </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" required class="form-control" placeholder="Enter your password">
+        </div>
 
-    <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" name="password" required class="form-control" placeholder="Enter your password">
-    </div>
-
-    <input type="submit" value="Login" class="btn btn-primary">
-</form>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
 {% endblock %}
