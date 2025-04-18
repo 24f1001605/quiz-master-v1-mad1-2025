@@ -1,6 +1,6 @@
 <nav class="navbar bg-body-tertiary">
     <form class="container-fluid justify-content-start">
-        {% if 'id' in session %}
+        {% if 'user_id' in session %}
         <a class="btn btn-outline-primary me-2" href="{{ url_for('profile') }}">Profile</a>
         <a class="btn btn-outline-primary me-2" href="{{ url_for('index') }}">Quiz Master</a>
         {% else %}
